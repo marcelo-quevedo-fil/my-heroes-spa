@@ -1,2 +1,4 @@
-export { default as DcPage } from "./DcPage";
-export { default as MarvelPage } from "./MarvelPage";
+export { DcPage } from "./DcPage";
+export { MarvelPage } from "./MarvelPage";
+export { SearchPage } from "./SearchPage";
+export { HeroPage } from "./HeroPage";

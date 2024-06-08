@@ -1,6 +1,14 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
-function Navbar() {
+export const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    navigate("login", {
+      replace: true,
+    });
+  };
+
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
       <Link className="navbar-brand" to="/">
@@ -13,7 +21,7 @@ function Navbar() {
             className={({ isActive }) => {
               return `"nav-item nav-link ${isActive ? "active" : ""}`;
             }}
-            to="/marvel"
+            to="marvel"
           >
             Marvel
           </NavLink>
@@ -22,7 +30,7 @@ function Navbar() {
             className={({ isActive }) => {
               return `"nav-item nav-link ${isActive ? "active" : ""}`;
             }}
-            to="/dc"
+            to="dc"
           >
             DC
           </NavLink>
@@ -34,11 +42,11 @@ function Navbar() {
           <span className="nav-item nav-link text-warning">
             Marcelo Andrés Quevedo
           </span>
-          <button className="nav-item nav-link btn">Logout</button>
+          <button className="nav-item nav-link btn" onClick={handleLogout}>
+            Logout
+          </button>
         </ul>
       </div>
     </nav>
   );
-}
-
-export default Navbar;
+};

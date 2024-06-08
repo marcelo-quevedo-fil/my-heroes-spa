@@ -1,5 +1,23 @@
-function LoginPage() {
-  return <></>;
-}
+import { useNavigate } from "react-router-dom";
 
-export default LoginPage;
+export const LoginPage = () => {
+  const navigator = useNavigate();
+
+  const handleLogin = () => {
+    navigator("/", {
+      replace: true,
+    });
+  };
+
+  return (
+    <>
+      <div className="container mt-5">
+        <h1>LoginPage</h1>
+        <hr />
+        <button className="btn btn-primary" onClick={handleLogin}>
+          Login
+        </button>
+      </div>
+    </>
+  );
+};

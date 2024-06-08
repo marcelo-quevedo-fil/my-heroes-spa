@@ -1,11 +1,9 @@
-import AppRouter from "./routes/AppRouter";
+import { AppRouter } from "./router/AppRouter";
 
-function HeroesApp() {
+export const HeroesApp = () => {
   return (
     <>
       <AppRouter />
     </>
   );
-}
-
-export default HeroesApp;
+};
