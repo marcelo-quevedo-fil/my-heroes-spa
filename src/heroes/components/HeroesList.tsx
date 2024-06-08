@@ -3,6 +3,7 @@ import { HeroeCard } from "../components";
 import { Heroe } from "./types";
 
 import { getHeroesByPublisher } from "../helpers";
+import { useMemo } from "react";
 
 export interface HeroesListProps {
   publisher: string;
@@ -11,7 +12,7 @@ export interface HeroesListProps {
 export const HeroesList = (props: HeroesListProps) => {
   const { publisher } = props;
 
-  const heroes = getHeroesByPublisher(publisher);
+  const heroes = useMemo(() => getHeroesByPublisher(publisher), [publisher]);
 
   return (
     <>
