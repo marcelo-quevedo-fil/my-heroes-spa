@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import "./styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "animate.css";
 
 import { HeroesApp } from "./HeroesApp";
 

@@ -21,7 +21,7 @@ export const HeroeCard = (props: HeroeCardProps) => {
       <div className="col">
         <div className="card">
           <div className="row no-gutters">
-            <div className="col-4">
+            <div className="col-4 animate__animated animate__fadeIn">
               <img src={heroeImageUrl} className="card-img" alt={superhero} />
             </div>
             <div className="col-8">
