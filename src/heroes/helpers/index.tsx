@@ -1,3 +1,3 @@
-export { getHeroesByPublisher } from "./getHeroesByPublisher.js";
-export { getHeroesById } from "./getHeroeById.js";
-export { getHeroesByName } from "./getHeroesByName.js";
+export { getHeroesByPublisher } from "./getHeroesByPublisher";
+export { getHeroesById } from "./getHeroeById";
+export { getHeroesByName } from "./getHeroesByName";

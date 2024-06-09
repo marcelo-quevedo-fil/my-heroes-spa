@@ -10,8 +10,9 @@ export const SearchPage = () => {
   const location = useLocation();
 
   const { q = "" } = queryString.parse(location.search);
+  const query = q?.toString();
 
-  const heroes = getHeroesByName(q);
+  const heroes = getHeroesByName(query ?? "");
 
   const { searchText, onInputChange } = useForm({
     searchText: q,

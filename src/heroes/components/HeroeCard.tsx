@@ -1,4 +1,3 @@
-import { Heroe } from "./types";
 import { Link } from "react-router-dom";
 
 interface HeroeCardProps {
@@ -11,8 +10,7 @@ interface HeroeCardProps {
 }
 
 export const HeroeCard = (props: HeroeCardProps) => {
-  const { id, superhero, publisher, alter_ego, first_appearance, characters } =
-    props;
+  const { id, superhero, alter_ego, first_appearance, characters } = props;
 
   const heroeImageUrl = `assets/heroes/${id}.jpg`;
 

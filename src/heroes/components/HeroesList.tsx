@@ -1,9 +1,8 @@
 import { HeroeCard } from "../components";
 
-import { Heroe } from "./types";
-
 import { getHeroesByPublisher } from "../helpers";
 import { useMemo } from "react";
+import { Heroe } from "./types";
 
 export interface HeroesListProps {
   publisher: string;
