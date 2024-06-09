@@ -47,7 +47,7 @@ export const HeroPage = () => {
               <b>Publisher</b> {hero.publisher}
             </li>
             <li className="list-group-item">
-              <b>First appearance:</b> {hero.publisher}
+              <b>First appearance:</b> {hero.first_appearance}
             </li>
           </ul>
 
