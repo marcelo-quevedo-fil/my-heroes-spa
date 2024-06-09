@@ -12,7 +12,7 @@ interface HeroeCardProps {
 export const HeroeCard = (props: HeroeCardProps) => {
   const { id, superhero, alter_ego, first_appearance, characters } = props;
 
-  const heroeImageUrl = `assets/heroes/${id}.jpg`;
+  const heroeImageUrl = `/assets/heroes/${id}.jpg`;
 
   return (
     <>
