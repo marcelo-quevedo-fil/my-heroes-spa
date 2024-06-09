@@ -1,3 +1,4 @@
+import { Heroe } from "../components/types";
 import { heroes } from "../data/heroes";
 
 export const getHeroesByPublisher = (publisher: string) => {
@@ -7,5 +8,5 @@ export const getHeroesByPublisher = (publisher: string) => {
     throw new Error(`${publisher} is not valid`);
   }
 
-  return heroes.filter((heroe) => heroe.publisher === publisher);
+  return heroes.filter((heroe: Heroe) => heroe.publisher === publisher);
 };

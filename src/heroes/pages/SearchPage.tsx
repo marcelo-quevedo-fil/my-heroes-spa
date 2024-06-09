@@ -9,13 +9,13 @@ export const SearchPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const { q = "" } = queryString.parse(location.search);
-  const query = q?.toString();
+  const { q } = queryString.parse(location.search);
+  const query = q?.toString() || "";
 
-  const heroes = getHeroesByName(query ?? "");
+  const heroes = getHeroesByName(query);
 
   const { searchText, onInputChange } = useForm({
-    searchText: q,
+    searchText: query,
   });
 
   const onSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -54,12 +54,12 @@ export const SearchPage = () => {
           <h4>Results</h4>
           <hr />
 
-          {q === "" ? (
+          {query === "" ? (
             <div className="alert alert-primary">Search a hero</div>
           ) : (
             heroes.length == 0 && (
               <div className="alert alert-danger animate__animated animate__fadeIn">
-                No heros with <b>{q}</b>
+                No heros with <b>{query}</b>
               </div>
             )
           )}
